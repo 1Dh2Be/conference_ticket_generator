@@ -1,17 +1,83 @@
-import webLogo from "./assets/images/logo-mark.svg"
+import { Form, Formik } from "formik"
+import webLogo from "./assets/images/logo-full.svg"
+import uploadIcon from "./assets/images/icon-upload.svg"
+import infoIcon from "./assets/images/icon-info.svg"
 
 function App() {
 
   return (
-    <div className='bg-bgMobile'>
-      <header className=''>
-        <div>
-          <img src={webLogo} alt="Website logo" />
-        </div>
-      </header>
-      <main>
-        <h1 className='text-2xl'>Your Journey to Coding Conf 2025 Starts Here!</h1>
-      </main>
+    <div className='bg-bgMobile h-screen'>
+      <div className="bg-patternLines h-screen">
+          <header className='flex justify-center items-center py-4 w-5/6 mx-auto'>
+            <div>
+              <img src={webLogo} alt="Website logo" />
+            </div>
+          </header>
+          <main className="flex flex-col justify-center items-center w-[90%] mx-auto">
+            <h1 className="text-2xl text-center font-bold pb-2">Your Journey to Coding Conf 2025 Starts Here!</h1>
+            <p className="text-neutral-400 text-center text-base pb-4">Secure your spot at next year's biggest coding conference.</p>
+            <section className="w-full pb-8">
+              <label>
+                <p className="text-neutral-300 pb-1">Upload Avatar</p>
+                <div className="flex flex-col justify-center items-center gap-2 w-full h-36 bg-white/10 backdrop-blur-sm border-2 border-white/20 shadow-lg border-gray-500 border-dashed rounded-xl">
+                  <img className="w-14 h-14 rounded-xl bg-gray/10 backdrop-blur-sm border border-gray-500" src={uploadIcon} alt="" />
+                  <p className="text-neutral-300 text-lg">Drag and drop or click to upload</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <img src={infoIcon} alt="" />
+                  <p className="text-[12px] text-[#adb5bd]">Upload your photo (JPG or PNG, max size: 500KB).</p>
+                </div>
+                <input
+                  type="file"
+                  hidden={true}
+                />
+              </label>
+            </section>
+
+            <section className="w-full">
+              <Formik
+                initialValues={{
+                  avatar: "",
+                  name: "",
+                  email: "",
+                  github: ""
+                }}
+                >
+                {() => {
+                  return (
+                    <Form className="flex flex-col gap-6">
+                      <label className="text-base">
+                        <p className="pb-1">Full Name</p>
+                        <input
+                          type="text"
+                          placeholder="Mimoun Atmani"
+                        />
+                      </label>
+
+                      <label className="text-base">
+                        Email Address
+                        <input
+                          type="email"
+                          placeholder="mimoun@email.com"
+                        />
+                      </label>
+
+                      <label className="text-base">
+                        Github Username
+                        <input
+                          type="text"
+                          placeholder="@mimounatmani007"
+                        />
+                      </label>
+                      <button type="submit" className="bg-orange-700 p-2 rounded-lg">Generate My Ticket</button>
+                    </Form>
+                  )
+                }}
+              </Formik>
+
+            </section>
+          </main>
+      </div>
     </div>
   )
 }

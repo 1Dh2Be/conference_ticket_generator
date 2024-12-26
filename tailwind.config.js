@@ -26,8 +26,10 @@ export default {
         inconsolata: ['Inconsolata', 'monospace'],
       },
       backgroundImage: {
-        bgDesktop: './src/assets/images/background-desktop.pmg',
-        bgMobile: './src/assets/images/background-mobile.pmg'
+        'bgDesktop': "url('/src/assets/images/background-desktop.png')",
+        'bgMobile': "url('/src/assets/images/background-mobile.png')",
+        'patternLines': "url('/src/assets/images/pattern-lines.svg')",
+        'patternCircle': "url('/src/assets/images/pattern-circle.svg')"
       }
     },
   },

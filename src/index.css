@@ -10,6 +10,10 @@
   }
 
   body {
-    @apply font-inconsolata text-neutral-900 text-xl
+    @apply font-inconsolata text-white text-xl
+  }
+
+  input {
+    @apply flex flex-1 w-full bg-white/10 backdrop-blur-[2px] border border-[#adb5bd] rounded-xl px-2 py-3 outline-none
   }
 }
