@@ -18,12 +18,12 @@ export default {
           500: 'hsl(7, 88%, 67%)',
           700: 'hsl(7, 71%, 60%)',
         },
-        gradient: {
-          text: ['hsl(7, 86%, 67%)', 'hsl(0, 0%, 100%)'],
-        },
       },
       fontFamily: {
         inconsolata: ['Inconsolata', 'monospace'],
+      },
+      backgroundImage: {
+        'gradient-text': 'linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%))',
       },
       backgroundImage: {
         'bgDesktop': "url('/src/assets/images/background-desktop.png')",
