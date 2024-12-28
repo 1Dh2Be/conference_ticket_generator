@@ -25,9 +25,9 @@ const TicketConfirmation = () => {
                         <div>
                             <img src={logo} alt="Conference website logo" />
                         </div>
-                        <div className="flex flex-col gap-2">
-                            <h2 className="text-2xl leading-none">Coding Conf</h2>
-                            <span className="text-xs text-gray-400">Jan 31, 2025 / Belgium, Bru</span>
+                        <div className="flex flex-col gap-1 mobile-md:gap-2">
+                            <h2 className="text-xl mobile-md:text-2xl leading-none">Coding Conf</h2>
+                            <span className="text-[11px] mobile-md:text-xs text-gray-400">Jan 31, 2025 / Belgium, Bru</span>
                         </div>
                     </section>
 
@@ -36,7 +36,7 @@ const TicketConfirmation = () => {
                     </section>
 
                     <section className="absolute left-4 bottom-4 flex items-center gap-4">
-                        <div className="w-14 h-14">
+                        <div className="w-12 h-12 mobile-md:w-14 mobile-md:h-14">
                             <img className="rounded-lg" src={testImage} alt="" />
                         </div>
                         <div>

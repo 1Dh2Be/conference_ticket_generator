@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'mobile-md': '390px'
+      },
       colors: {
         neutral: {
           0: 'hsl(0, 0%, 100%)',

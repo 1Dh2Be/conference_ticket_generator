@@ -7,7 +7,7 @@ const RootLayout = () => {
     return (
             <div className='bg-bgMobile h-screen'>
               <div className="bg-patternLines h-screen">
-                <header className='flex justify-center items-center pt-6 pb-10 w-5/6 mx-auto'>
+                <header className='flex justify-center items-center pt-3 mobile-md:pt-6 pb-6 mobile-md:pb-8 xl:pb-10 w-5/6 mx-auto'>
                   <div>
                     <img src={webLogo} alt="Website logo" />
                   </div>

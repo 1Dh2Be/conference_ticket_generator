@@ -14,7 +14,7 @@
   }
 
   input {
-    @apply flex flex-1 w-full bg-white/10 backdrop-blur-[2px] border-2 border-[#adb5bd] rounded-xl px-2 py-3 outline-none 
+    @apply flex flex-1 w-full bg-white/10 backdrop-blur-[2px] border-2 border-[#adb5bd] rounded-xl px-1 py-2 mobile-md:px-2 mobile-md:py-3 outline-none 
     hover:border-2 hover:border-neutral-300 focus:border-2 focus:border-neutral-300
   }
 }
