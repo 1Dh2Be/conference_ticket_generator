@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import uploadIcon from "../../assets/images/icon-upload.svg"
 
 const INITIAL_FORM_STATE = {
     fullName: "",
@@ -26,8 +27,30 @@ export const TicketProvider = ({ children }) => {
         }));
     }
 
+    const [image, setImage] = useState(() => {
+        const savedImage = localStorage.getItem('image')
+        return savedImage ? savedImage : uploadIcon
+    });
+
+    useEffect(() => {
+        localStorage.setItem('image', image)
+    }, [image])
+
+    const handleImageChange = (e, handleChange) => {
+
+        handleChange(e);
+        const file = e.target.files[0];
+        
+        const newImageUrl = URL.createObjectURL(file);
+        setImage(newImageUrl);
+    };
+
+    const resetImage = () => {
+        setImage(uploadIcon)
+    }
+
     return (
-        <ticketContext.Provider value={{ userData, setUserData, handleUpdate}}>
+        <ticketContext.Provider value={{ userData, image, setUserData, handleUpdate, handleImageChange, resetImage}}>
             {children}
         </ticketContext.Provider>
     );
