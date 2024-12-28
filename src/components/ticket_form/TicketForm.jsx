@@ -2,7 +2,7 @@
 //Component & hook import
 import { Form, Formik } from "formik"
 
-//Image import 
+//Image import
 import infoIcon from "../../assets/images/icon-info.svg"
 import { useDataUser } from "./ticketContext.jsx"
 import { useNavigate } from "react-router";
@@ -27,8 +27,8 @@ function TicketForm() {
 
   return (
           <main className="flex flex-col justify-center items-center">
-            <section className="xl:w-[70vw]">
-              <h1 className="text-lg mobile-md:text-2xl lg: text-center font-bold pb-2 leading-tight">Your Journey to Coding Conf 2025 Starts Here!</h1>
+            <section className="xl:w-[50vw] 2xl:w-[70vw]">
+              <h1 className="text-lg mobile-md:text-2xl lg:text-4xl text-center font-bold pb-2 leading-tight">Your Journey to Coding Conf 2025 Starts Here!</h1>
               <p className="text-neutral-400 text-center text-sm mobile-md:text-base pb-4">Secure your spot at next year's biggest coding conference.</p>
             </section>
 
@@ -45,9 +45,9 @@ function TicketForm() {
                 >
                 {({values, handleBlur, handleChange, touched, errors}) => {
                   return (
-                    <Form className="flex flex-col gap-4 mobile-md:gap-6">
+                    <Form className="flex flex-col gap-4 mobile-md:gap-6 xl:gap-5">
 
-                      <section className="w-full pb-4 mobile-md:pb-8 lg:pb-6">
+                      <section className="w-full pb-4 mobile-md:pb-8 lg:pb-6 xl:pb-0">
                         <label>
                           <div className="flex justify-between pr-1">
                             <p className="text-sm text-neutral-300 pb-1">Upload Avatar</p>

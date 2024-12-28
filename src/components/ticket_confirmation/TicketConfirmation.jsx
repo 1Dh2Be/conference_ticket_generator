@@ -1,10 +1,9 @@
-//Logo & icon import 
+//Logo & icon import
 import logo from "../../assets/images/logo-mark.svg"
 import gitIcon from "../../assets/images/icon-github.svg"
-import testImage from "../../assets/images/image-avatar.jpg"
 
 
-//Component & hook import 
+//Component & hook import
 import { useDataUser } from "../ticket_form/ticketContext"
 import { useEffect } from "react"
 import { useNavigate } from "react-router"
@@ -19,23 +18,21 @@ const TicketConfirmation = () => {
 
     const navigate = useNavigate();
 
-    useEffect(() => {
-        const timeOut = setTimeout(() => {
-            console.log("resetting local storage & redirecting to form");
-            localStorage.clear();
-            resetImage();
+    // useEffect(() => {
+    //     const timeOut = setTimeout(() => {
+    //         console.log("resetting local storage & redirecting to form");
+    //         localStorage.clear();
+    //         resetImage();
 
-            navigate("/")
-        }, 15000);
+    //         navigate("/")
+    //     }, 15000);
 
-        return () => clearTimeout(timeOut)
-    }, [])
-
-    
+    //     return () => clearTimeout(timeOut)
+    // }, [])
 
     return (
-        <main>
-            <h1 className="text-center pb-7 text-2xl mobile-md:text-3xl lg:text-3xl xl:text-5xl xl:w-[40vw]">Congrats, <span className="bg-clip-text text-transparent bg-gradient-to-r from-[hsl(7,86%,67%)] to-[hsl(0,0%,100%)]">{`${userData.fullName}!`}</span> Your ticket is ready.</h1>
+        <main className="flex flex-col justify-center items-center">
+            <h1 className="text-center pb-7 text-2xl mobile-md:text-3xl lg:text-3xl xl:text-4xl xl:w-[40vw]">Congrats, <span className="bg-clip-text text-transparent bg-gradient-to-r from-[hsl(7,86%,67%)] to-[hsl(0,0%,100%)]">{`${userData.fullName}!`}</span> Your ticket is ready.</h1>
             <p className="text-center text-base font-normal pb-20 text-gray-300">We've emailed your ticket to <span className="text-orange-500">{userData.email}</span> and will send updates in the run up to the event.</p>
 
             <section className="relative">
