@@ -26,10 +26,10 @@ function TicketForm() {
   return (
     <main className="flex flex-col items-center justify-center">
       <section className="xl:w-[50vw] 2xl:w-[70vw]">
-        <h1 className="pb-2 text-center text-lg font-bold leading-tight md:text-3xl lg:text-3xl mobile-md:text-2xl">
+        <h1 className="pb-2 text-center text-lg font-bold leading-tight mobile-md:text-2xl md:text-3xl lg:text-3xl">
           Your Journey to Coding Conf 2025 Starts Here!
         </h1>
-        <p className="pb-4 text-center text-sm text-neutral-400 lg:pb-10 mobile-md:text-base">
+        <p className="pb-4 text-center text-sm text-neutral-400 mobile-md:text-base lg:pb-10">
           Secure your spot at next year's biggest coding conference.
         </p>
       </section>
@@ -47,8 +47,8 @@ function TicketForm() {
         >
           {({ values, handleBlur, handleChange, touched, errors }) => {
             return (
-              <Form className="small-height:grid-rows- flex flex-col gap-4 xl:gap-5 mobile-md:gap-6 small-height:grid small-height:grid-cols-2">
-                <section className="w-full pb-4 lg:pb-0 mobile-md:pb-8 small-height:row-span-3">
+              <Form className="small-height:grid-rows- flex flex-col gap-4 mobile-md:gap-6 xl:gap-5 small-height:grid small-height:grid-cols-2">
+                <section className="w-full pb-0 lg:pb-0 small-height:row-span-3">
                   <label>
                     <div className="flex justify-between pr-1">
                       <p className="pb-1 text-sm text-neutral-300">
@@ -60,7 +60,7 @@ function TicketForm() {
                         </div>
                       ) : null}
                     </div>
-                    <div className="flex h-28 w-full flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-gray-500 border-white/20 bg-white/10 shadow-lg backdrop-blur-sm xl:h-36 mobile-md:h-36 small-height:h-52">
+                    <div className="flex h-28 w-full flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-gray-500 border-white/20 bg-white/10 shadow-lg backdrop-blur-sm mobile-md:h-36 xl:h-36 small-height:h-52">
                       <img
                         className="bg-gray/10 h-14 w-14 rounded-xl border border-gray-500 backdrop-blur-sm"
                         src={image}
