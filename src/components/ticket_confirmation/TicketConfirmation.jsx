@@ -1,6 +1,7 @@
 //Logo & icon import
 import logo from "../../assets/images/logo-mark.svg";
 import gitIcon from "../../assets/images/icon-github.svg";
+import ticket from "../../assets/images/pattern-ticket.svg";
 
 //Component & hook import
 import { useDataUser } from "../ticket_form/ticketContext";
@@ -45,8 +46,8 @@ const TicketConfirmation = () => {
         <div className="w-full">
           <img
             className="md:h-52 lg:h-44"
-            src="src/assets/images/pattern-ticket.svg"
-            alt=""
+            src={ticket}
+            alt="Ticket pattern image"
           />
         </div>
         <div>
