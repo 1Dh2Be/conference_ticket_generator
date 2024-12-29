@@ -10,7 +10,8 @@ import validationSchema from "./schemas.js";
 function TicketForm() {
   const navigate = useNavigate();
 
-  const { handleUpdate, image, handleImageChange } = useDataUser();
+  const { handleUpdate, image, handleImageChange, setIsFormSubmitted } =
+    useDataUser();
 
   const handleFormikChange = (e, handleChange) => {
     handleChange(e);
@@ -18,13 +19,14 @@ function TicketForm() {
   };
 
   const handleSubmit = () => {
-    navigate("confirmation");
+    setIsFormSubmitted(true);
+    navigate("/confirmation");
   };
 
   return (
     <main className="flex flex-col items-center justify-center">
       <section className="xl:w-[50vw] 2xl:w-[70vw]">
-        <h1 className="pb-2 text-center text-lg font-bold leading-tight mobile-md:text-2xl md:text-3xl lg:text-3xl">
+        <h1 className="pb-2 text-center text-lg font-bold leading-tight md:text-3xl lg:text-3xl mobile-md:text-2xl">
           Your Journey to Coding Conf 2025 Starts Here!
         </h1>
         <p className="pb-4 text-center text-sm text-neutral-400 lg:pb-10 mobile-md:text-base">

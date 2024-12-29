@@ -16,17 +16,17 @@ const TicketConfirmation = () => {
 
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //     const timeOut = setTimeout(() => {
-  //         console.log("resetting local storage & redirecting to form");
-  //         localStorage.clear();
-  //         resetImage();
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      console.log("resetting local storage & redirecting to form");
+      localStorage.clear();
+      resetImage();
 
-  //         navigate("/")
-  //     }, 15000);
+      navigate("/");
+    }, 15000);
 
-  //     return () => clearTimeout(timeOut)
-  // }, [])
+    return () => clearTimeout(timeOut);
+  }, []);
 
   return (
     <main className="flex flex-col items-center justify-center">
