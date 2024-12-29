@@ -5,8 +5,8 @@ import webLogo from "../assets/images/logo-full.svg"
 
 const RootLayout = () => {
     return (
-            <div className='bg-bgMobile h-screen'>
-              <div className="bg-patternLines h-screen">
+            <div className='bg-bgMobile h-screen bg-no-repeat bg-cover'>
+              <div className="bg-patternLines h-screen bg-no-repeat bg-cover">
                 <header className='flex justify-center items-center pt-3 mobile-md:pt-6 pb-6 mobile-md:pb-8 xl:pb-6 w-5/6 mx-auto'>
                   <div>
                     <img src={webLogo} alt="Website logo" />
