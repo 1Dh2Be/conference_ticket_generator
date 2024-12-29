@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        'mobile-md': '390px'
+        'mobile-md': '390px',
+        'small-height': { raw: '(max-height: 750px) and (min-width: 500px)' },
       },
       colors: {
         neutral: {

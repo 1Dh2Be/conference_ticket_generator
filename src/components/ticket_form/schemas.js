@@ -7,7 +7,7 @@ const validationSchema = Yup.object({
     .required("is required")
     .min(2, "Min 2 characters"),
   email: Yup.string()
-    .required("Email is required")
+    .required("is required")
     .email("Invalid email format"),
   github: Yup.string()
     .required("is required"),
