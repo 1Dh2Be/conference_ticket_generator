@@ -5,11 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'mobile-md': '390px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+      'small-height': { raw: '(max-height: 750px) and (min-width: 500px)' },
+    },
     extend: {
-      screens: {
-        'mobile-md': '390px',
-        'small-height': { raw: '(max-height: 750px) and (min-width: 500px)' },
-      },
       colors: {
         neutral: {
           0: 'hsl(0, 0%, 100%)',

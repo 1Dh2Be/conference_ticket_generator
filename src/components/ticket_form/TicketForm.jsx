@@ -24,7 +24,7 @@ function TicketForm() {
   return (
     <main className="flex flex-col items-center justify-center">
       <section className="xl:w-[50vw] 2xl:w-[70vw]">
-        <h1 className="pb-2 text-center text-lg font-bold leading-tight lg:text-3xl mobile-md:text-2xl">
+        <h1 className="pb-2 text-center text-lg font-bold leading-tight mobile-md:text-2xl md:text-3xl lg:text-3xl">
           Your Journey to Coding Conf 2025 Starts Here!
         </h1>
         <p className="pb-4 text-center text-sm text-neutral-400 lg:pb-10 mobile-md:text-base">
@@ -45,7 +45,7 @@ function TicketForm() {
         >
           {({ values, handleBlur, handleChange, touched, errors }) => {
             return (
-              <Form className="flex flex-col gap-4 xl:gap-5 mobile-md:gap-6 small-height:grid small-height:grid-cols-2 small-height:grid-rows-4">
+              <Form className="small-height:grid-rows- flex flex-col gap-4 xl:gap-5 mobile-md:gap-6 small-height:grid small-height:grid-cols-2">
                 <section className="w-full pb-4 lg:pb-0 mobile-md:pb-8 small-height:row-span-3">
                   <label>
                     <div className="flex justify-between pr-1">
@@ -143,7 +143,7 @@ function TicketForm() {
 
                 <button
                   type="submit"
-                  className="rounded-lg bg-orange-700 p-2 small-height:col-span-2 small-height:h-12"
+                  className="row-auto rounded-lg bg-orange-700 p-2 small-height:col-span-2 small-height:h-12"
                 >
                   Generate My Ticket
                 </button>

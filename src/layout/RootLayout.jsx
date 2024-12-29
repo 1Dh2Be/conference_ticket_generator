@@ -1,23 +1,23 @@
-import { Outlet } from "react-router"
+import { Outlet } from "react-router";
 
 //Logo import
-import webLogo from "../assets/images/logo-full.svg"
+import webLogo from "../assets/images/logo-full.svg";
 
 const RootLayout = () => {
-    return (
-            <div className='bg-bgMobile h-screen bg-no-repeat bg-cover'>
-              <div className="bg-patternLines h-screen bg-no-repeat bg-cover">
-                <header className='flex justify-center items-center pt-3 mobile-md:pt-6 pb-6 mobile-md:pb-8 lg:pb-4 xl:pb-6 w-5/6 mx-auto'>
-                  <div>
-                    <img src={webLogo} alt="Website logo" />
-                  </div>
-                </header>
-                <section className="w-[90%] mx-auto lg:w-[60%] xl:w-[30%] 2xl:w-[25%]">
-                  <Outlet/>
-                </section>
-              </div>
-            </div>
-    )
-}
+  return (
+    <div className="h-screen bg-bgMobile bg-cover bg-no-repeat">
+      <div className="h-screen bg-patternLines bg-cover bg-no-repeat">
+        <header className="mx-auto flex w-5/6 items-center justify-center mobile-md:pb-8 mobile-md:pt-6 pb-6 pt-3 lg:pb-4 xl:pb-6 2xl:pb-36">
+          <div>
+            <img src={webLogo} alt="Website logo" />
+          </div>
+        </header>
+        <section className="mx-auto w-[90%] md:w-[60%] xl:w-[30%] 2xl:w-[25%]">
+          <Outlet />
+        </section>
+      </div>
+    </div>
+  );
+};
 
-export default RootLayout
+export default RootLayout;
